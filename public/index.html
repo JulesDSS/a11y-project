@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analizador de Accesibilidad</title>
+</head>
+<body>
+  <form action="/analyze" method="post">
+<input type="text" id="url" placeholder="Ingresa la URL del sitio web">
+<button onclick="getRecommendations()">Obtener recomendaciones</button>
+</form>
+<p id="result"></p>
+
+<script> 
+async function getRecommendations() {
+  const url = document.getElementById('url').value;
+  console.log(JSON.stringify({url}))
+  try {
+    const response = await fetch('http://localhost:3000/analyze', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ url })
+    });
+    
+    const result = await response.text();
+    document.getElementById('result').innerText = result;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+</script>
+</body>
+</html>

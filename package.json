@@ -1,7 +1,6 @@
 {
   "name": "hackathon",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,17 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "lighthouse": "^11.1.0",
     "openai": "^4.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulesDSS/a11y-project.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JulesDSS/a11y-project/issues"
+  },
+  "homepage": "https://github.com/JulesDSS/a11y-project#readme",
+  "description": ""
 }
