@@ -4,7 +4,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const openai = require('openai');
 
-openai.apiKey = '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';
+openai.apiKey = "api-key-here";
 
 const app = express();
 const PORT = 3000;
